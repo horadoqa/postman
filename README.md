@@ -1,4 +1,4 @@
-# postman
+# Postman
 
 O **Postman** é uma ferramenta popular para desenvolvedores e testers de APIs (Interfaces de Programação de Aplicações). Ele facilita o desenvolvimento, teste e documentação de APIs RESTful, SOAP, GraphQL, entre outros tipos de serviços web. O Postman permite interagir com APIs de maneira simples e eficiente, sem precisar escrever código ou usar comandos no terminal.
 

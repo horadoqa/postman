@@ -1,0 +1,144 @@
+{
+  "info": {
+    "name": "ServeRest - Usuários",
+    "_postman_id": "12345678-serve-rest-users",
+    "description": "Collection para gerenciar usuários na API ServeRest: cadastrar, listar, filtrar, consultar, atualizar e excluir.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Cadastrar Usuário",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"nome\": \"Hora do QA\",\n    \"email\": \"horadoqa@gmail.com\",\n    \"password\": \"1q2w3e4r\",\n    \"administrador\": \"true\"\n}"
+        },
+        "url": {
+          "raw": "https://serverest.dev/usuarios",
+          "protocol": "https",
+          "host": ["serverest","dev"],
+          "path": ["usuarios"]
+        }
+      }
+    },
+    {
+      "name": "Listar Todos os Usuários",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "https://serverest.dev/usuarios",
+          "protocol": "https",
+          "host": ["serverest","dev"],
+          "path": ["usuarios"]
+        }
+      }
+    },
+    {
+      "name": "Consultar Usuário por Email",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "https://serverest.dev/usuarios",
+          "protocol": "https",
+          "host": ["serverest","dev"],
+          "path": ["usuarios"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "let email = 'horadoqa@gmail.com';",
+              "let user = pm.response.json().usuarios.find(u => u.email === email);",
+              "pm.test('Usuário encontrado', () => {",
+              "    pm.expect(user).to.not.be.undefined;",
+              "});",
+              "console.log(user);"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Consultar Usuário por Nome",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "https://serverest.dev/usuarios",
+          "protocol": "https",
+          "host": ["serverest","dev"],
+          "path": ["usuarios"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "let nome = 'Hora do QA';",
+              "let user = pm.response.json().usuarios.find(u => u.nome === nome);",
+              "pm.test('Usuário encontrado', () => {",
+              "    pm.expect(user).to.not.be.undefined;",
+              "});",
+              "console.log(user);"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Consultar Usuário por ID",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "https://serverest.dev/usuarios/:id",
+          "protocol": "https",
+          "host": ["serverest","dev"],
+          "path": ["usuarios", ":id"]
+        }
+      }
+    },
+    {
+      "name": "Atualizar Usuário",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"nome\": \"Hora do QA Atualizado\",\n    \"email\": \"horadoqa@gmail.com\",\n    \"password\": \"1q2w3e4r\",\n    \"administrador\": \"true\"\n}"
+        },
+        "url": {
+          "raw": "https://serverest.dev/usuarios/:id",
+          "protocol": "https",
+          "host": ["serverest","dev"],
+          "path": ["usuarios", ":id"]
+        }
+      }
+    },
+    {
+      "name": "Excluir Usuário",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "https://serverest.dev/usuarios/:id",
+          "protocol": "https",
+          "host": ["serverest","dev"],
+          "path": ["usuarios", ":id"]
+        }
+      }
+    }
+  ]
+}
