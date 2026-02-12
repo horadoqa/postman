@@ -32,6 +32,9 @@ O **Postman** é uma ferramenta popular para desenvolvedores e testers de APIs (
 8. **Importação e Exportação**:
    - Você pode importar e exportar coleções e ambientes, o que torna a integração com equipes e sistemas de CI/CD (Integração Contínua) mais fácil.
 
+9. **Performance**
+   - O Postman **não é uma ferramenta de teste de carga “de verdade”**, mas permite realizar **testes básicos de carga e desempenho** usando alguns recursos adicionais.
+
 ### Por que usar o Postman?
 
 - **Facilidade de uso**: Sua interface gráfica é intuitiva e não exige conhecimento profundo de programação, o que torna o Postman acessível para todos, desde desenvolvedores até testadores e analistas de QA.
@@ -47,3 +50,13 @@ O **Postman** é uma ferramenta popular para desenvolvedores e testers de APIs (
 
 ### Conclusão:
 O Postman é uma ferramenta poderosa e fácil de usar que simplifica o processo de interagir, testar e documentar APIs, sendo útil tanto para desenvolvedores quanto para equipes de QA.
+
+### Próximo Passo:
+
+- [Instalação do Postman](./docs/install.md)
+- [Métodos e suas funções:]()
+   - [GET - Buscar dados](./docs/get.md)
+   - [POST - Criar dados](./docs/post.md)
+   - [PUT - Atualizar tudo](./docs/put.md)
+   - [PATCH - Atualizar parte](./docs/patch.md)
+   - [DELETE - Remover](./docs/delete.md)

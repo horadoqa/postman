@@ -1,5 +1,7 @@
 # Criando Testes de Performance no Postman
 
+O Postman **não é uma ferramenta de teste de carga “de verdade”**, mas permite realizar **testes básicos de carga e desempenho** usando alguns recursos adicionais.
+
 Este guia descreve como configurar e executar **testes de performance** no Postman, utilizando diferentes tipos de carga para avaliar o comportamento da aplicação.
 
 ---
